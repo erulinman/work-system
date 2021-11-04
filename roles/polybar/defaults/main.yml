@@ -1,0 +1,8 @@
+---
+packages:
+  aur:
+   - polybar
+config_path: "{{ home  }}/.config/polybar"
+config: config
+launcher: launch.sh
+autostart_command: exec_always --no-startup-id $HOME/.config/polybar/launch.sh

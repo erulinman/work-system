@@ -1,0 +1,5 @@
+---
+packages:
+  pacman:
+    - virtualbox
+    - virtualbox-host-modules-arch

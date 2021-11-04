@@ -1,0 +1,13 @@
+---
+- include_role: name=software
+
+- name: Create font config directory
+  file:
+    state: directory
+    path: "{{ home }}/.config/fontconfig"
+
+- name: Copy font config
+  copy:
+    src: fonts.conf
+    dest: "{{ home }}/.config/fontconfig/fonts.conf"
+  notify: Update font cache

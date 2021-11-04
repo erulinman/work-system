@@ -1,0 +1,11 @@
+---
+packages:
+  pacman:
+    - noto-fonts
+    - noto-fonts-cjk #  Simplified Chinese, Traditional Chinese, Japanese, and Korea
+    - ttf-dejavu
+    - ttf-font-awesome
+    - ttf-liberation # Steam
+    - wqy-zenhei # Steam
+  #aur:
+    #- artwiz-fonts # only AUR

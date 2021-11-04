@@ -1,0 +1,6 @@
+---
+packages:
+  pacman: picom
+config: picom.conf
+config_path: "{{ home }}/.config/picom"
+autostart_command: exec --no-startup-id picom --config=$HOME/.config/picom/picom.conf -b

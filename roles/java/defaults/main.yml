@@ -1,0 +1,6 @@
+---
+packages:
+  pacman:
+  - java-runtime-common
+  - java-environment-common
+  - jdk-openjdk

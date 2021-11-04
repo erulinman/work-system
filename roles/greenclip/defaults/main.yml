@@ -1,0 +1,5 @@
+---
+packages:
+  aur:
+   - rofi-greenclip
+bindsym: bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'

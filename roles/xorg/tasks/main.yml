@@ -1,0 +1,11 @@
+---
+- include_role: name=software
+
+- name: Set keyboard config
+  copy:
+    src: "{{ keyboard_config }}"
+    dest: "{{ xorg_config_path }}/{{ keyboard_config }}"
+    owner: root
+    group: root
+    mode: 0644
+  become: yes

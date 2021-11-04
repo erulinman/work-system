@@ -1,0 +1,8 @@
+---
+packages:
+  pacman:
+    - dunst
+
+config: dunstrc
+config_path: "{{ home }}/.config/dunst"
+autostart_command: exec_always --no-startup-id dunst &

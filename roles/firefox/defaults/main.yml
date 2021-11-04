@@ -1,0 +1,5 @@
+---
+packages:
+  pacman: firefox
+assign: assign [class="firefox"] 2
+autostart_command: exec --no-startup-id firefox &

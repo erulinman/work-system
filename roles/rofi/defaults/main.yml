@@ -1,0 +1,8 @@
+---
+packages:
+  pacman:
+    - rofi
+theme: theme.rasi
+config: config.rasi
+config_path: "{{ local_config_path }}/rofi"
+bindsym: bindsym $mod+space exec rofi -show run

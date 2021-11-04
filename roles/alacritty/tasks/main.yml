@@ -1,0 +1,14 @@
+---
+- include_role: name=software
+
+- include_role: name=i3_config_addition
+
+- name: Check dir existing
+  file:
+    state: directory
+    path: "{{ config_path }}"
+
+- name: Set config
+  copy:
+    src: "{{ config }}"
+    dest: "{{ config_path }}/{{ config }}"

@@ -1,0 +1,24 @@
+---
+- name: Install pacman packages
+  pacman:
+    name: "{{ packages.pacman }}"
+    state: present
+    update_cache: yes
+  become: yes
+  when:
+    - packages.pacman is defined
+
+- name: Install pip packages
+  pip:
+    name: "{{ packages.pip }}"
+    extra_args: --user
+  when:
+    - packages.pip is defined
+
+- name: Install aur packages
+  aur:
+    name: "{{ packages.aur }}"
+    state: present
+  become_user: "{{ aur_user }}"
+  when:
+    - packages.aur is defined

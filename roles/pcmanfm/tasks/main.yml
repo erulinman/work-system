@@ -1,0 +1,9 @@
+---
+- include_role: name=software
+
+- include_role: name=i3_config_addition
+
+- name: Set uac.xml config
+  copy:
+    src: uca.xml
+    dest: "{{ home }}/.config/Thunar/"

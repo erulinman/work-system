@@ -1,0 +1,6 @@
+---
+packages:
+  pacman:
+    - ranger
+    - w3m
+config_path: "{{ home }}/.config/ranger"

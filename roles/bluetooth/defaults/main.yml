@@ -1,0 +1,7 @@
+---
+packages:
+  pacman:
+    - blueman
+    - bluez
+    - bluez-utils
+    - pulseaudio-bluetooth

@@ -1,0 +1,10 @@
+---
+- include_role: name=software
+
+- name: Load bluetooth modules in PulseAudio
+    blockinfile:
+      path: /etc/pulse/system.pa
+      block: |
+        load-module module-bluetooth-policy
+        load-module module-bluetooth-discover
+  become: yes

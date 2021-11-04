@@ -1,0 +1,7 @@
+---
+- name: Install packages
+  include_role: name=software
+
+- name: Set the Java environment
+  command: archlinux-java set java-11-openjdk
+  become: yes

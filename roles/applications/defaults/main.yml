@@ -1,0 +1,30 @@
+---
+packages:
+  pacman:
+    - alsa-utils
+    - archey3
+    - base-devel
+    #- chrony
+    - discord
+    - feh
+    - gimp
+    - git
+    - gnome-screenshot
+    - keepass
+    - libreoffice-still
+    - libva-utils
+    - man-db
+    - ntfs-3g # automount for vainfo
+    - qbittorrent
+    - systemd-resolvconf # wireguard
+    - tar
+    - telegram-desktop
+    - torbrowser-launcher
+    - tree
+    - unzip
+    - vlc
+    - wireguard-tools # wireguard
+    - xclip #TODO: лучше использовать менеджер?
+  aur:
+    - obsidian
+    - yay

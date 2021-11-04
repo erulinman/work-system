@@ -1,0 +1,29 @@
+---
+- include_role: name=software
+
+- name: Create a directory
+  file:
+    path: "{{ config_path }}"
+    state: directory
+    mode: 0755
+
+- name: Set config
+  copy:
+    src: config
+    dest: "{{ config_path }}/config"
+  notify: Restart i3
+
+- name: Set xinitrc
+  copy:
+    src: xinitrc
+    dest: "{{ home}}/.xinitrc"
+
+- name: Copy wall
+  copy:
+    src: wall.jpg
+    dest: "{{ home }}/wall.jpg"
+
+- name: Set autostart after login
+  lineinfile:
+    path: "{{ home }}/.bashrc"
+    line: '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx'

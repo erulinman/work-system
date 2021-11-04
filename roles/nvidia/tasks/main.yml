@@ -1,0 +1,9 @@
+---
+- name: Set blacklist for nouveau
+  copy:
+    dest: /etc/modprobe.d/blacklist.conf
+    content: |
+      blacklist nouveau
+  become: true
+
+- include_role: name=software

@@ -1,0 +1,8 @@
+---
+packages:
+  pacman:
+    - xorg
+    - xorg-xinit
+    - xorg-xmodmap
+xorg_config_path: /etc/X11/xorg.conf.d
+keyboard_config: 00-keyboard.conf

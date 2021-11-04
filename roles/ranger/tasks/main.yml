@@ -1,0 +1,22 @@
+---
+- include_role: name=software
+
+- name: Check config path
+  file:
+    path: "{{ config_path }}"
+    state: directory
+    mode: 0755
+
+- name: Copy configs
+  copy:
+    src: "{{ item.file }}"
+    dest: "{{ config_path }}"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: "{{ item.mode }}"
+  with_items:
+    - { file: "commands_full.py", mode: "0644" }
+    - { file: "commands.py", mode: "0644" }
+    - { file: "rc.conf", mode: "0644" }
+    - { file: "rifle.conf", mode: "0644" }
+    - { file: "scope.sh", mode: "0755" }

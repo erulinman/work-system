@@ -1,0 +1,13 @@
+---
+packages:
+  pacman:
+    - pcmanfm # main package
+    - libgsf # OpenDocument preview
+    - ffmpegthumbnailer # videofiles preview
+    - evince # PDF preview
+    - unzip
+    - file-roller
+    - ntfs-3g
+
+assign: assign [class="Pcmanfm"] 6
+autostart_command: exec --no-startup-id pcmanfm -d & pcmanfm

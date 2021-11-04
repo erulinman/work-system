@@ -1,0 +1,28 @@
+---
+- name: i3 config addition
+  block:
+    - name: Assign
+      lineinfile:
+        path: "{{ i3wm_config }}"
+        line: "{{ assign }}"
+        insertafter: '# Assign'
+      when:
+        - assign is defined
+
+    - name: Set custom bindsym
+      lineinfile:
+        path: "{{ i3wm_config }}"
+        line: "{{ bindsym }}"
+        insertafter: '# Custom bind'
+      when:
+        - bindsym is defined
+
+    - name: Set autostart command
+      lineinfile:
+        path: "{{ i3wm_config }}"
+        line: "{{ autostart_command }}"
+        insertafter: '# Autostart'
+      when:
+        - autostart_command is defined
+  notify:
+    - Restart i3

@@ -1,0 +1,29 @@
+---
+- hosts: localhost
+  gather_facts: yes
+  roles:
+    - alacritty
+    - android-studio
+    - applications
+    - aur-user
+    - dunst
+    - i3wm
+    - idea
+    - firefox
+    - fonts
+    - greenclip
+    - java
+    - kotlin
+    - neovim
+    - nvidia
+    - pacman
+    - pcmanfm # instead of thunar
+    - picom
+    - polybar
+    - python
+    - rofi
+    - sound
+    #- thunar
+    - time
+    - virtualbox
+    - xorg

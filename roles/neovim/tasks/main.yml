@@ -1,0 +1,14 @@
+---
+- name: Create a directory
+  file:
+    path: "{{ config_path }}"
+    state: directory
+    mode: 0755
+
+- name: Set configs
+  copy:
+    src: "{{ item }}"
+    dest: "{{ config_path }}/{{ item }}"
+  with_items: "{{ nvim_configs }}"
+
+- include_role: name=software

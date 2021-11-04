@@ -1,0 +1,12 @@
+---
+packages:
+  pacman:
+    - neovim
+    - xclip
+  pip:
+    - neovim
+config_path: "{{ home }}/.config/nvim"
+nvim_configs:
+  - init.vim
+  - mappings.vim
+  - settings.vim

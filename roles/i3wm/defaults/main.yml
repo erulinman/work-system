@@ -1,0 +1,6 @@
+---
+packages:
+  pacman:
+    - i3-gaps
+    - i3lock
+config_path: "{{ home }}/.config/i3"

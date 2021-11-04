@@ -1,0 +1,15 @@
+---
+packages:
+  pacman:
+    - catfish
+    - clamav
+    - clamtk
+    - gvfs
+    - mlocate
+    - thunar
+    - thunar-archive-plugin
+    - thunar-volman
+    - tumbler
+
+assign: assign [class="Thunar"] 6
+autostart_command: exec --no-startup-id thunar --daemon & thunar

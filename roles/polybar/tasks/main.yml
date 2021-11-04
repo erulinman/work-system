@@ -1,0 +1,33 @@
+---
+- include_role: name=software
+
+- include_role: name=i3_config_addition
+
+- name: Create a directory
+  file:
+    path: "{{ config_path }}"
+    state: directory
+    mode: 0755
+
+- name: Set config
+  copy:
+    src: "{{ config }}"
+    dest: "{{ config_path }}/{{ config }}"
+  notify: Restart i3
+
+- name: Set plugins
+  copy:
+    src: "{{ item.pluginfile }}"
+    dest: "{{ config_path }}/{{ item.pluginfile }}"
+    mode: "{{ item.mode }}"
+  notify: Restart i3
+  with_items:
+    - { pluginfile: "crypto-config", mode: "0644" }
+    - { pluginfile: "crypto.py", mode: "0755" }
+
+- name: Set launcher
+  copy:
+    src: "{{ launcher }}"
+    dest: "{{ config_path }}/{{ launcher }}"
+    mode: 0755
+  notify: Restart i3

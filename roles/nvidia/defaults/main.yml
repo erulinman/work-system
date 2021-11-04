@@ -1,0 +1,9 @@
+---
+packages:
+  pacman:
+  - lib32-nvidia-utils
+  - linux-headers #TODO: это нужно перенести в роль postinstall
+  - nvidia
+  - nvidia-dkms
+  - nvidia-settings
+  - nvidia-utils

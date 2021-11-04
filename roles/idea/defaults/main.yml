@@ -1,0 +1,5 @@
+---
+packages:
+  pacman:
+  - intellij-idea-community-edition
+assign: assign [class="jetbrains-idea-ce"] 10

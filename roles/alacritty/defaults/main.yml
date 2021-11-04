@@ -1,0 +1,10 @@
+---
+packages:
+  pacman:
+    - alacritty
+    - ttf-hack
+config: alacritty.yml
+config_path: "{{ home }}/.config/alacritty"
+assign: assign [class="Alacritty"] 1
+bindsym: bindsym $mod+Return exec alacritty
+autostart_command: exec --no-startup-id alacritty &
