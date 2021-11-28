@@ -3,8 +3,9 @@ configuration {
     lines: 12;
     font: "Source Sans Pro 12";
     show-icons: true;
-    theme: "./theme.rasi";
     dpi: 0;
     display-window: "Window";
     display-drun: "Search";
 }
+
+@theme "./theme.rasi"
