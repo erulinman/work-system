@@ -1,1 +1,2 @@
-ansible-playbook -i inventory main.yml -K --connect=local
+ansible-galaxy collection install kewlfft.aur
+ansible-playbook main.yml -K --connection=local

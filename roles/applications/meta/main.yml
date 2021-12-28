@@ -1,4 +1,3 @@
 ---
 dependencies:
   - aur-user
-  - ansible-aur

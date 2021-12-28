@@ -16,7 +16,7 @@
     - packages.pip is defined
 
 - name: Install aur packages
-  aur:
+  kewlfft.aur.aur:
     name: "{{ packages.aur }}"
     state: present
   become_user: "{{ aur_user }}"

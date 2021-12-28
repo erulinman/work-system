@@ -28,3 +28,4 @@ packages:
   aur:
     - obsidian
     - yay
+    - skypeforlinux-stable-bin
