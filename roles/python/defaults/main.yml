@@ -4,3 +4,6 @@ packages:
     - glibc
     - python
     - python-pip
+  apt:
+    - python3
+    - python3-pip

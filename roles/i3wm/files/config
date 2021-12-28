@@ -14,10 +14,6 @@ default_border pixel 3
 # Window rules (bash> xprop |grep -i WM_CLASS)
 #for_window [instance="__scratchpad"] move scratchpad; scratchpad show; resize set 2560 1440; move scratchpad
 
-# Gaps
-gaps inner 10
-gaps outer 4
-
 # Assign
 assign [class="TelegramDesktop"] 3
 assign [class="discord"] 3
@@ -30,7 +26,7 @@ bindsym $mod+F12 exec i3lock -i $HOME/workspace/wallhavens/wallhaven-006.png
 bindsym $mod+Shift+Print exec gnome-screenshot -ia
 
 # Autostart
-exec_always --no-startup-id feh --bg-fill $HOME/wall.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/.wall.jpg
 #exec --no-startup-id udiskie --no-notify &
 #exec --no-startup-id nm-applet &
 #exec --no-startup-id blueman-applet &

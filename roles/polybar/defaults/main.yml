@@ -2,6 +2,8 @@
 packages:
   aur:
    - polybar
+  apt:
+    - polybar
 config_path: "{{ home  }}/.config/polybar"
 config: config
 launcher: launch.sh

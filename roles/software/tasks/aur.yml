@@ -1,0 +1,9 @@
+---
+- name: Install aur packages
+  kewlfft.aur.aur:
+    name: "{{ packages.aur }}"
+    state: present
+  become_user: "{{ aur_user }}"
+  when:
+    - ansible_os_family == 'Archlinux'
+    - packages.aur is defined

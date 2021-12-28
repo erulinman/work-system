@@ -2,6 +2,8 @@
 packages:
   pacman:
     - rofi
+  apt:
+    - rofi
 theme: theme.rasi
 config: config.rasi
 config_path: "{{ local_config_path }}/rofi"

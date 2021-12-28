@@ -1,24 +1,17 @@
 ---
-- name: Install pacman packages
-  pacman:
-    name: "{{ packages.pacman }}"
-    state: present
-    update_cache: yes
-  become: yes
+- include_tasks: apt.yml
   when:
-    - packages.pacman is defined
+    - ansible_os_family == "Debian"
+    - packages.apt is defined
 
-- name: Install pip packages
-  pip:
-    name: "{{ packages.pip }}"
-    extra_args: --user
+- include_tasks: aur.yml
   when:
-    - packages.pip is defined
-
-- name: Install aur packages
-  kewlfft.aur.aur:
-    name: "{{ packages.aur }}"
-    state: present
-  become_user: "{{ aur_user }}"
-  when:
+    - ansible_os_family == 'Archlinux'
     - packages.aur is defined
+
+- include_tasks: pacman.yml
+  when:
+    - ansible_os_family == 'Archlinux'
+    - packages.aur is defined
+
+- include_tasks: pip.yml

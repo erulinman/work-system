@@ -2,28 +2,27 @@
 - hosts: localhost
   gather_facts: yes
   roles:
-    - alacritty
-    - android-studio
-    - applications
-    - aur-user
-    - dunst
+    #- alacritty
+    #- android-studio
+    #- applications
+    #- aur-user
+    #- dunst
     - i3wm
-    - idea
-    - firefox
-    - fonts
-    - greenclip
-    - java
-    - kotlin
-    - neovim
-    - nvidia
-    - pacman
-    - pcmanfm # instead of thunar
-    - picom
+    #- idea
+    #- firefox
+    #- fonts
+    #- greenclip
+    #- java
+    #- kotlin
+    #- neovim
+    #- nvidia
+    #- pcmanfm # instead of thunar
+    #- picom
     - polybar
     - python
     - rofi
-    - sound
+    #- sound
     #- thunar
     - time
-    - virtualbox
+    #- virtualbox
     - xorg

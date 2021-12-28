@@ -1,0 +1,10 @@
+---
+- name: Install pacman packages
+  pacman:
+    name: "{{ packages.pacman }}"
+    state: present
+    update_cache: yes
+  become: yes
+  when:
+    - ansible_os_family == 'Debian'
+    - packages.pacman is defined

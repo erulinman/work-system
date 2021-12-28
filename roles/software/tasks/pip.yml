@@ -1,0 +1,7 @@
+---
+- name: Install pip packages
+  pip:
+    name: "{{ packages.pip }}"
+    extra_args: --user
+  when:
+    - packages.pip is defined

@@ -4,5 +4,9 @@ packages:
     - xorg
     - xorg-xinit
     - xorg-xmodmap
+  apt:
+    - xorg
+    - xinit
+    - x11-xserver-utils
 xorg_config_path: /etc/X11/xorg.conf.d
 keyboard_config: 00-keyboard.conf

@@ -16,7 +16,7 @@
 - name: Set xinitrc
   copy:
     src: xinitrc
-    dest: "{{ home}}/.xinitrc"
+    dest: "{{ home }}/.xinitrc"
 
 - name: Copy wall
   copy:
